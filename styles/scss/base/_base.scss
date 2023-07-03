@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+body {
+    background: $white;
+    color: $black;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    font-weight: 400;
+    color: $white;
+}
+
+.container {
+    max-width: 1630px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo {
+    font-size: 22px;
+
+    span {
+        font-weight: 500;
+        position: relative;
+        padding-left: 50px;
+        color: $textGreen;
+        &::before {
+            content: "";
+            background-image: url(./../../images/carousel/logo.svg);
+            width: 30px;
+            height: 30px;
+            top: -3px;
+            left: 8px;
+            position: absolute;
+        }
+    }
+}
+
+.none {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

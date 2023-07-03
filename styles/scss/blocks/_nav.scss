@@ -1,0 +1,112 @@
+.nav {
+    margin-right: 30px;
+}
+.nav__list{
+    display: flex;
+    column-gap: 50px;
+
+    >li {
+        position: relative;
+        
+        &:hover >a{
+            border-bottom: 1.5px solid $white;
+            padding-bottom: 3px;
+        }
+
+        &:hover .sub-nav__list {
+            display: block;
+        }
+    }
+}
+
+.sub-nav__list {
+    padding-top: 20px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 20px;
+
+    >li {
+        padding: 10px 0;
+        cursor: pointer;
+        min-width: 180px;
+
+        &:hover { 
+            border-bottom: 1px solid $white;
+        }
+    }
+}
+
+.sub-nav__link {
+    font-size: 18px;
+    line-height: 125%;
+    font-weight: 300;
+}
+
+// Burger menu
+.menu {
+    display: none;
+    align-self: center;
+    &:hover {
+        .menu_button {
+            width: 35px;
+            height: 35px;
+        }
+
+        ::before, ::after, .button_line {
+            background: #000;
+        }
+
+        .menu_button::after {
+            transform: rotate(45deg);
+            bottom: 16px;
+        }
+        .menu_button::before {
+            transform: rotate(-45deg);
+            top: 16px;
+        }
+        .button_line {
+            transform: translate(100px, 0);
+        }
+    }
+}
+
+.menu_button {
+    width: 45px;
+    height: 29px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    &::before, &::after, .button_line {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        background: $white;
+        transition: transform .5s ease;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {      
+        bottom: 0;
+    }
+}
+
+.button_line {
+    top: 13px;
+}
+
+// Media
+@media screen and (max-width: 1000px) {
+    .nav {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+}

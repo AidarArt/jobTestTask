@@ -1,0 +1,331 @@
+.carousel {
+    padding: 300px 0;
+    position: relative;
+}
+
+// Content
+h1 {
+    font-weight: 500;
+    line-height: 120%;
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid $white;
+    display: inline-block;
+    -webkit-text-stroke: 0.5px #FFF;
+}
+
+h2 {
+    margin-top: 30px;
+    max-width: 880px;
+    font-weight: 500;
+    font-size: 96px;
+    color: $white;
+    line-height: 110%;
+    -webkit-text-stroke: 1px $white;
+    z-index: 5;
+}
+
+.carousel__content {
+    max-width: 1430px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.content__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 45px;
+    flex-wrap: wrap;
+    gap: 30px;
+    p {
+        max-width: 600px;
+        font-weight: 300;
+        line-height: 125%;
+        color: $white;
+        -webkit-text-stroke: 1px $white;
+        z-index: 5;
+    }
+
+    a {
+        padding: 18px 50px;
+        border: 2px dashed $white;
+        z-index: 5;
+
+        &:hover {
+            transition: background .3s ease-in;
+            background: $white;
+            border: 0;
+            padding: 20px 51px;
+            font-weight: 500;
+            line-height: 120%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1530px) {
+    .carousel__content {
+        max-width: 1100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .carousel {
+        padding: 230px 0 !important;
+    }
+    
+    .carousel__content, .statusbar {
+        max-width: 540px !important;
+        h2 {
+            font-size: 36px;
+            -webkit-text-stroke: 0;
+        }
+    }
+
+    .carousel__arrows {
+        margin-bottom: 270px !important;
+    }
+
+    .content__row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .background_left {
+        height: 50% !important;
+        width: 100% !important;
+    }
+
+    .carousel__background {
+
+        &::after {
+            bottom: 294px !important;
+            transform: skewY(355deg) !important;
+            transform-origin: 0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .arrow {
+        background: transparent !important;
+    }
+}
+// Background
+.carousel__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        // top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: skewY(-78.805deg);
+        transform-origin: 63%;
+        z-index: -1;
+        height: 100%;
+        display: block;
+    }
+}
+
+.background_left {
+    height: 100%;
+    width: 63%;
+}
+
+.ride-left {
+    transition: transform .3s ease, opacity .5s ease;
+    transform: translateX(-100px);
+    opacity: 0;
+}
+.ride-right {
+    transition: transform .3s ease, opacity .5s ease;
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+// Controllers
+.carousel__controllers {
+    position: absolute;
+    height: 53%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.controllers__row {
+    margin: 0 auto;
+    max-width: 1820px;
+    padding: 0 15px;
+}
+
+.carousel__arrows {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 292px;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background .5s ease;
+    
+}
+
+.arrow-left {
+    background: url(./../../images/carousel/arrowLeft.svg) no-repeat;
+    &:hover {
+        background: url(./../../images/carousel/hoverArrowLeft.svg) no-repeat; 
+    }
+}
+
+.arrow-right {
+    background: url(./../../images/carousel/arrowRight.svg) no-repeat;
+    &:hover {
+        background: url(./../../images/carousel/hoverArrowRight.svg) no-repeat; 
+    }
+    background-position: right;
+}
+
+.statusbar {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1430px;
+    padding: 0 15px;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.state {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    cursor: pointer;
+
+    transition: border-color .3s ease;
+}
+
+.state-active {
+    width: 25px;
+    height: 25px;
+    border-radius: 0;
+    border: 0;
+    background-size: cover;
+    transition: transform .3s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.slide-hidden {
+    display: none;
+}
+
+// Green Slide
+.h1-green {
+    color: $textGreen;
+}
+.bacground-green {
+    background-image: url('./../../images/carousel/backgroundGreen.jpg');
+    &::after {
+        background: $green;
+    }
+}
+.background_left-green {
+    background: $green;
+}
+.state-green {
+    &:hover {
+        border-color: $textGreen;
+    }
+}
+.state-active-green {
+    background: url(./../../images/carousel/logoGreen.svg) no-repeat;
+}
+.button-green {
+    &:hover {
+        color: $textGreen;
+    }
+}
+.logo-green {
+    span {
+        color: $textGreen;
+    }
+}
+// Blue slide
+.h1-blue {
+    color: $textBlue;
+}
+.bacground-blue {
+    background-image: url('./../../images/carousel/backgroundBlue.jpg');
+    &::after {
+        background: $blue;
+    }
+}
+.background_left-blue {
+    background: $blue;
+}
+.state-blue {
+    &:hover {
+        border-color: $textBlue;
+    }
+}
+.state-active-blue {
+    background: url(./../../images/carousel/logoBlue.svg) no-repeat;
+}
+.button-blue {
+    &:hover {
+        color: $textBlue;
+    } 
+}
+.logo-blue {
+    span {
+        color: $textBlue;
+    }
+}
+// Purple slide
+.h1-purple {
+    color: $textPurple;
+}
+.bacground-purple {
+    background-image: url('./../../images/carousel/backgroundPurple.jpg');
+    &::after {
+        background: $purple;
+    }
+}
+.background_left-purple {
+    background: $purple;
+}
+.state-purple {
+    &:hover {
+        border-color: $textPurple;
+    }
+}
+.state-active-purple {
+    background: url(./../../images/carousel/logoPurple.svg) no-repeat;
+}
+.button-purple {
+    &:hover {
+      color: $textPurple;  
+    }
+}
+.logo-purple {
+    span {
+        color: $textPurple;
+    }
+}
+
+// Media

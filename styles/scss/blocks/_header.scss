@@ -1,0 +1,20 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 70px 0 0;
+    line-height: 120%;
+    z-index: 10;
+}
+.header__row {
+    max-width: 1500px;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.header-black {
+    background: #454746;
+}

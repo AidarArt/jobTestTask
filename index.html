@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning</title>
+    <link rel="stylesheet" href="./styles/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <div class="logo">
+                    <a href="#!">
+                        учимся
+                        <span class="logo-weigthText">
+                            Онлайн
+                        </span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="#!" class="nav__link">Новичкам</a>
+                            <ul class="sub-nav__list">
+                                <li><a href="#!" class="sub-nav__link">Дизайн</a></li>
+                                <li><a href="#!" class="sub-nav__link">Аналитика</a></li>
+                                <li><a href="#!" class="sub-nav__link">Маркетинг</a></li>
+                                <li><a href="#!" class="sub-nav__link">Программирование</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!" class="nav__link">Специалистам</a>
+                            <ul class="sub-nav__list">
+                                <li><a href="#!" class="sub-nav__link">Дизайн</a></li>
+                                <li><a href="#!" class="sub-nav__link">Аналитика</a></li>
+                                <li><a href="#!" class="sub-nav__link">Маркетинг</a></li>
+                                <li><a href="#!" class="sub-nav__link">Программирование</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#!" class="nav__link">Руководителям</a>
+                            <ul class="sub-nav__list">
+                                <li><a href="#!" class="sub-nav__link">Стратегия</a></li>
+                                <li><a href="#!" class="sub-nav__link">Цифровые финансы</a></li>
+                                <li><a href="#!" class="sub-nav__link">Цифровой маркетинг</a></li>
+                                <li><a href="#!" class="sub-nav__link">Бизнес и управление</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="menu">
+                    <div class="menu_button">
+                        <div class="button_line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="carousel">
+            <!-- Green -->
+            <div class="slide" data-color="green">
+                <div class="carousel__content">
+                    <h1 class="h1-green">Новички</h1>
+                    <h2>Сделайте шаг к новой професии</h2>
+                    <div class="content__row">
+                        <p>Курсы, которые помогут освоить востребованную профессию
+                            с нуля или изучить новую специализациюк новой профессии</p>
+                        <a href="#!" class="button-green">Подробнее</a>
+                    </div>
+                </div>
+                <div class="carousel__background bacground-green">
+                    <div class="background_left background_left-green"></div>
+                </div>
+            </div>
+            <!-- Blue -->
+            <div class="slide" data-color="blue">
+                <div class="carousel__content">
+                    <h1 class="h1-blue">Специалисты</h1>
+                    <h2>Сделайте шаг к росту карьеры</h2>
+                    <div class="content__row">
+                        <p>Курсы для специалистов с опытом, чтобы развиваться
+                            в профессии и открывать новые возможности в карьере</p>
+                        <a href="#!" class="button-blue">Подробнее</a>
+                    </div>
+                </div>
+                <div class="carousel__background bacground-blue">
+                    <div class="background_left background_left-blue"></div>
+                </div>
+            </div>
+            <!-- Purple -->
+            <div class="slide" data-color="purple">
+                <div class="carousel__content">
+                <h1 class="h1-purple">Руководители</h1>
+                <h2>Сделайте шаг к новым решениям</h2>
+                <div class="content__row">
+                    <p>Курсы для руководителей, чтобы развивать управленческие навыки и растить бизнес</p>
+                    <a href="#!" class="button-purple">Подробнее</a>
+                </div>
+            </div>
+            <div class="carousel__background bacground-purple">
+                <div class="background_left background_left-purple"></div>
+            </div>
+            </div>
+            <!-- Controllers -->
+            <div class="carousel__controllers">
+                <div class="controllers__row">
+                    <div class="carousel__arrows">
+                        <div id="btn-left" class="arrow arrow-left"></div>
+                        <div id="btn-right" class="arrow arrow-right"></div>
+                    </div>
+                    <div class="statusbar">
+                        <div class="state state-active" data-color="green"></div>
+                        <div class="state" data-color="blue"></div>
+                        <div class="state" data-color="purple"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__row">
+                    <div class="about__item">
+                        <div class="item-image">
+                            <img src="./images/carousel/graduated.svg" alt="graduated">
+                        </div>
+                        <div class="item-title greenH3">
+                            <h3>Получите<br>профессию</h3>
+                        </div>
+                        <div class="item-text">
+                            <p>Базовые курсы для изучения новой сферы
+                            или профессии — с практикой и помощью
+                            в трудоустройстве</p>
+                        </div>
+                    </div>
+
+                    <div class="about__item">
+                        <div class="item-image">
+                            <img src="./images/carousel/growth.svg" alt="growth">
+                        </div>
+                        <div class="item-title blueH3">
+                            <h3>Растите<br>в профессии</h3>
+                        </div>
+                        <div class="item-text">
+                            <p>Курсы продвинутого уровня для тех, кто хочет усилить позиции в текущей профессии, вырасти
+                                в доходе, изучить новые инструменты</p>
+                        </div>
+                    </div>
+
+                    <div class="about__item">
+                        <div class="item-image">
+                            <img src="./images/carousel/development.svg" alt="development">
+                        </div>
+                        <div class="item-title purpleH3">
+                            <h3>Управляйте<br>эффективно</h3>
+                        </div>
+                        <div class="item-text">
+                            <p>Курсы для руководителей, чтобы научиться эффективно решать сложные задачи
+                                в управлении командой и бизнесом</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <div class="shadow-box"></div>
+        <div class="modal">
+            <div class="close"></div>
+            <nav class="nav-menu">
+                <ul class="nav-menu__list">
+                    <li>
+                        <a href="#!" class="nav-menu__link">Новичкам</a>
+                        <ul class="nav-menu-sub__list">
+                            <li><a href="#!" class="nav-menu-sub__link">Дизайн</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Аналитика</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Маркетинг</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Программирование</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!" class="nav-menu__link">Специалистам</a>
+                        <ul class="nav-menu-sub__list">
+                            <li><a href="#!" class="nav-menu-sub__link">Дизайн</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Аналитика</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Маркетинг</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Программирование</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!" class="nav-menu__link">Руководителям</a>
+                        <ul class="nav-menu-sub__list">
+                            <li><a href="#!" class="nav-menu-sub__link">Дизайн</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Аналитика</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Маркетинг</a></li>
+                            <li><a href="#!" class="nav-menu-sub__link">Программирование</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__text">
+                    <h4>Сделайте шаг к новой профессии</h4>
+                    <p>Расскажите нам о своих целях и мы поможем выбрать подходящую программу.</p>
+                </div>
+                <div class="footer__form">
+                    <form action="" class="form">
+                        <input id="mail" type="text" placeholder="Вас зовут">
+                        <input type="tel" placeholder="+7 (000) 000-00-00">
+                        <button><nobr>Оставить заявку</nobr></button>
+                    </form>
+                    <div class="privacy__text">
+                        <p>Отправляя заявку, я соглашаюсь на обработку <a href="#!">персональных данных</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__black">
+            <div class="container">
+                <div class="logo">
+                <a href="#!">
+                    учимся
+                    <span class="logo-weigthText">
+                        Онлайн
+                    </span>
+                </a>
+            </div>  
+            </div>
+            
+        </div>
+    </footer>
+    <script src="./scripts/carousel.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
